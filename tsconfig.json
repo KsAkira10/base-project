@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ksakira10/ngx-via-cep": [
+        "dist/@ksakira10/ngx-via-cep"
+      ],
+      "@ksakira10/ngx-via-cep/*": [
+        "dist/@ksakira10/ngx-via-cep/*"
+      ]
+    }
   }
 }
