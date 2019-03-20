@@ -12,6 +12,20 @@
     "publish": "npm run publish:viacep",
     "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KsAkira10/base-project.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "readme": "./README.md",
+  "author": {
+    "email": "akirauehara@hotmail.com",
+    "name": "Lucas Akira Uehara",
+    "url": "https://www.linkedin.com/in/lucasakirauehara/"
+  },
+  "license": "MIT",
   "private": false,
   "dependencies": {
     "@angular/animations": "~7.2.0",
