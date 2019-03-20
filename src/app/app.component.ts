@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   providers: []
 })
 export class AppComponent implements OnInit {
-  title = 'base-project';
+  title = 'Base Project';
 
   constructor() {}
 
   ngOnInit() {}
+
+  openMenu() {
+    console.log('open')
+  }
 }

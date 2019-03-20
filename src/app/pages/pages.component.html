@@ -1,2 +1,22 @@
-<h2>Pages</h2>
-<router-outlet></router-outlet>
+<section class="row flex-xl-nowrap">
+  <aside class="col-12 col-md-3 col-xl-2 bd-sidebar">
+    <nav class="bd-links collapse">
+      <div class="bd-toc-item">
+        <a href="/" class="bd-toc-link">Getting started</a>
+      </div>
+      <div class="bd-toc-item" routerLinkActive="active">
+        <a routerLink="/ngx-via-cep" class="bd-toc-link">
+          NgxViaCepModule
+        </a>
+        <ul class="nav bd-sidenav">
+          <li class="bd-sidenav-active" routerLinkActive="active">
+            <a routerLink="/ngx-via-cep">NgxViaCepComponent</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+  <article class="col-12 col-md-9 col-xl-8 py-3 pl-md-5 bd-content">
+    <router-outlet></router-outlet>
+  </article>
+</section>
