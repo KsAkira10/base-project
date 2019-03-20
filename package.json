@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prepublish": "ng build ngx-via-cep",
-    "publish": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public"
+    "publish": "npm run publish:viacep",
+    "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public"
   },
   "private": false,
   "dependencies": {
