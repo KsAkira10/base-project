@@ -1,4 +1,23 @@
 <h3>ngx-via-cep</h3>
-<p>
-  ngx-via-cep works!
-</p>
+<form
+  [formGroup]="viaCepForm"
+  (ngSubmit)="fetchByCEP(viaCepForm)"
+  class="input-group mb-3"
+>
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="cep">CEP</label>
+  </div>
+
+  <input
+    id="cep"
+    name="cep"
+    type="tel"
+    formControlName="cep"
+    placeholder="00000-000"
+    class="form-control"
+  />
+
+  <div class="input-group-append">
+    <input type="submit" value="Buscar" class="btn btn-outline-primary" />
+  </div>
+</form>
