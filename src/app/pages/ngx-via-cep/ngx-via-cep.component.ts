@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-ngx-via-cep',
   templateUrl: './ngx-via-cep.component.html',
-  styleUrls: ['./ngx-via-cep.component.sass'],
+  styleUrls: ['./ngx-via-cep.component.scss'],
   providers: [NgxViaCepService]
 })
 export class NgxViaCepComponent implements OnInit {
