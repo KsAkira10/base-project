@@ -29,38 +29,6 @@
     </div>
   </div>
 </form>
-
-<form
-  [formGroup]="viaAddressForm"
-  [ngClass]="{ 'was-validated': viaAddressForm.dirty && viaAddressForm.valid }"
-  (ngSubmit)="fetchByAddress(viaAddressForm)"
-  class="needs-validation"
-  novalidate
->
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <label class="input-group-text" for="address">Endereço</label>
-    </div>
-
-    <input
-      id="address"
-      name="address"
-      type="tel"
-      formControlName="address"
-      placeholder="Avenida Inconfidência Mineira"
-      class="form-control"
-      [ngClass]="{
-        'is-valid': address.dirty && address.valid,
-        'is-invalid': address.dirty && address.invalid
-      }"
-      (keyup)="fetchByAddress(viaAddressForm)"
-    />
-
-    <div class="input-group-append">
-      <input type="submit" value="Buscar" class="btn btn-outline-primary" />
-    </div>
-  </div>
-</form>
 <pre>
   <h5>Result: </h5>
   <code>
