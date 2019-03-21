@@ -14,7 +14,7 @@
     "publish": "npm run publish:viacep",
     "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public",
     "deploy": "npm run gh-pages",
-    "gh-pages": "gh-pages -d dist/base-project -b master"
+    "gh-pages": "gh-pages -d dist/base-project -b gh-pages"
   },
   "repository": {
     "type": "git",
