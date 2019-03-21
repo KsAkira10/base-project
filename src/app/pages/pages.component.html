@@ -1,6 +1,6 @@
 <section class="row flex-xl-nowrap">
   <aside class="col-12 col-md-3 col-xl-2 bd-sidebar">
-    <nav class="bd-links collapse">
+    <nav class="bd-links collapse" [ngClass]="{ 'show': menu.open }">
       <div class="bd-toc-item">
         <a href="/" class="bd-toc-link">Getting started</a>
       </div>

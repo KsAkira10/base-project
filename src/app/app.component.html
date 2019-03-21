@@ -7,9 +7,9 @@
       data-toggle="collapse"
       data-target="#navbarNav"
       aria-controls="navbarNav"
-      aria-expanded="false"
+      [attr.aria-expanded]="menu.open"
       aria-label="Toggle navigation"
-      (click)="openMenu()"
+      (click)="handleOnClick()"
     >
       <span class="navbar-toggler-icon">
         <svg
