@@ -12,7 +12,9 @@
     "e2e": "ng e2e",
     "prepublish": "ng build ngx-via-cep",
     "publish": "npm run publish:viacep",
-    "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public"
+    "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public",
+    "deploy": "npm run gh-pages",
+    "gh-pages": "gh-pages -d dist/base-project -b master"
   },
   "repository": {
     "type": "git",
