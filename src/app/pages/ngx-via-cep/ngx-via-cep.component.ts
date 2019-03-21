@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  NgxViaCepService,
-  NgxViaCepConfiguration
-} from '@ksakira10/ngx-via-cep';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgxViaCepService } from '@ksakira10/ngx-via-cep';
 
 @Component({
   selector: 'app-ngx-via-cep',
@@ -15,10 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class NgxViaCepComponent implements OnInit {
   viaCepForm: FormGroup;
   cep: FormControl;
-  constructor(
-    private httpClient: HttpClient,
-    private viaCepService: NgxViaCepService
-  ) {
+  result: string;
+  constructor(private viaCepService: NgxViaCepService) {
     this.cep = new FormControl(
       { value: '', disabled: false },
       {
@@ -43,6 +37,8 @@ export class NgxViaCepComponent implements OnInit {
     }
     const { fetchByCEP } = this.viaCepService;
     const { cep } = form.value;
-    fetchByCEP(cep).subscribe(data => console.log(data));
+    fetchByCEP(cep).subscribe(
+      data => (this.result = JSON.stringify(data, null, 2))
+    );
   }
 }
