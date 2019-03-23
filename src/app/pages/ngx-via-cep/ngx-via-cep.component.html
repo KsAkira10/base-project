@@ -28,6 +28,32 @@
       <input type="submit" value="Buscar" class="btn btn-outline-primary" />
     </div>
   </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="endereco">Endereço</label>
+    </div>
+
+    <input
+      id="endereco"
+      name="endereco"
+      type="text"
+      formControlName="endereco"
+      placeholder="Avenida Inconfidência Mineira"
+      class="form-control"
+      list="enderecos"
+      [ngClass]="{
+        'is-valid': endereco.dirty && endereco.valid,
+        'is-invalid': endereco.dirty && endereco.invalid
+      }"
+      autocomplete="off"
+    />
+    <datalist id="enderecos">
+      <option [value]="logradouro" *ngFor="let logradouro of logradouros">
+        {{ logradouro }}
+      </option>
+    </datalist>
+  </div>
 </form>
 <pre>
   <h5>Result: </h5>
