@@ -12,6 +12,10 @@ const routes: Routes = [
         loadChildren: './ngx-via-cep/ngx-via-cep.module#NgxViaCepModule'
       },
       {
+        path: 'capture-phonenumber',
+        loadChildren: './capture-phonenumber/capture-phonenumber.module#CapturePhonenumberModule'
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'ngx-via-cep'

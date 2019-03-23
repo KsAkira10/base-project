@@ -1,0 +1,24 @@
+<h3 class="mb-3">capture-phonenumber</h3>
+
+<form [formGroup]="form">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="cep">Telefone</label>
+    </div>
+
+    <input
+      type="tel"
+      formControlName="phoneNumber"
+      class="form-control"
+      required
+      [ngClass]="{
+        'is-valid': phoneNumber.dirty && phoneNumber.valid,
+        'is-invalid': phoneNumber.dirty && phoneNumber.invalid
+      }"
+    />
+
+    <div class="input-group-append">
+      <input type="submit" value="Buscar" class="btn btn-outline-primary" />
+    </div>
+  </div>
+</form>
