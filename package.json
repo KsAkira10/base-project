@@ -13,8 +13,9 @@
     "prepublish": "ng build ngx-via-cep",
     "publish": "npm run publish:viacep",
     "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public",
-    "deploy": "npm run gh-pages",
-    "gh-pages": "gh-pages -d ./dist/base-project -r https://github.com/KsAkira10/base-project.git"
+    "predeploy": "npm run build:viacep && ng build --prod --base-href=/base-project/",
+    "deploy": "npm run predeploy && npm run gh-pages",
+    "gh-pages": "npx gh-pages -d ./dist/base-project/ -r https://github.com/KsAkira10/base-project.git"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,7 @@
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
-    "@angular/core": "^7.2.10",
+    "@angular/core": "^7.2.9",
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
@@ -62,6 +63,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "gh-pages": "^2.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^4.0.1",
@@ -72,9 +74,9 @@
     "ng-packagr": "^4.2.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tsickle": ">=0.34.0",
+    "tsickle": "^0.34.3",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "^3.1.1"
   }
 }
