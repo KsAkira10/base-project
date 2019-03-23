@@ -6,14 +6,14 @@
     "start": "ng serve",
     "build": "npm run build:viacep && npm run build:prod",
     "build:viacep": "ng build ngx-via-cep",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --prod --base-href=/base-project/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prepublish": "ng build ngx-via-cep",
     "publish": "npm run publish:viacep",
     "publish:viacep": "npm publish ./dist/@ksakira10/ngx-via-cep --tag latest --access public",
-    "predeploy": "npm run build:viacep && ng build --prod --base-href=/base-project/",
+    "predeploy": "npm run build:viacep && npm run build:prod",
     "deploy": "npm run predeploy && npm run gh-pages",
     "gh-pages": "npx gh-pages -d ./dist/base-project/ -r https://github.com/KsAkira10/base-project.git"
   },
@@ -31,6 +31,7 @@
     "url": "https://www.linkedin.com/in/lucasakirauehara/"
   },
   "license": "MIT",
+  "homepage": "https://ksakira10.github.io/base-project/ngx-via-cep",
   "private": false,
   "dependencies": {
     "@angular/animations": "~7.2.0",
