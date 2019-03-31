@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "npm run build:viacep && npm run build:prod",
     "build:viacep": "ng build ngx-via-cep",
-    "build:prod": "ng build --prod --base-href=/base-project/",
+    "build:prod": "ng build --prod --base-href=/base-project/ && node ./utils/copy-files.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -24,6 +24,7 @@
   "keywords": [
     "angular"
   ],
+  "main": "./utils/copy-files.js",
   "readme": "./README.md",
   "author": {
     "email": "akirauehara@hotmail.com",
