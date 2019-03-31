@@ -1,13 +1,14 @@
 <h3 class="mb-3">capture-phonenumber</h3>
 
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="fetchUserByPhone(form)">
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <label class="input-group-text" for="cep">Telefone</label>
+      <label class="input-group-text" for="phoneNumber">Telefone</label>
     </div>
 
     <input
       type="tel"
+      id="phoneNumber"
       formControlName="phoneNumber"
       class="form-control"
       required
@@ -18,7 +19,11 @@
     />
 
     <div class="input-group-append">
-      <input type="submit" value="Buscar" class="btn btn-outline-primary" />
+      <input
+        type="submit"
+        class="btn btn-outline-primary"
+        formControlName="submit"
+      />
     </div>
   </div>
 </form>
