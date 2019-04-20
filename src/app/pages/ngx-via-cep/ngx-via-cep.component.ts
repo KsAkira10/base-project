@@ -98,6 +98,9 @@ export class NgxViaCepComponent implements OnInit, OnDestroy {
                 tap(data => (this.logradouros = data))
               )
               .subscribe();
+          } else {
+            this.logradouros = [];
+            this.result = '';
           }
         })
       )
