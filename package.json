@@ -1,6 +1,6 @@
 {
   "name": "base-project",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --base-href=/base-project/ -o",
